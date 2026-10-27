@@ -1,8 +1,28 @@
 ---
-title: "Analysis 1"
+title: "A Beautiful Graphic"
 author: "Dustin Tharp"
+
+execute:
+  echo: false
 
 format: html
 ---
 
 Dustin Tharp is a data science maestro!
+
+```{r}
+#| message: false
+library(tidyverse)
+```
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg, color = factor(cyl))) +
+  geom_point(size = 3) +
+  labs(
+    title = "Fuel economy by vehicle weight",
+    x = "Weight (1000 lbs)",
+    y = "Miles per gallon",
+    color = "Cylinders"
+  ) +
+  theme_minimal()
+```
