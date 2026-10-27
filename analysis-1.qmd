@@ -4,3 +4,5 @@ author: "Dustin Tharp"
 
 format: html
 ---
+
+Dustin Tharp is a data science maestro!
